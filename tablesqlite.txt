@@ -1,0 +1,33 @@
+CREATE TABLE `tbl_Incoming` (
+	`id`	integer PRIMARY KEY AUTOINCREMENT,
+	`payersId`	int,
+	`amount`	REAL,
+	`date`	varchar(20),
+	`userid`	INTEGER
+);
+CREATE TABLE `tbl_Outgoing` (
+	`id`	integer PRIMARY KEY AUTOINCREMENT,
+	`payeesId`	int,
+	`amount`	REAL,
+	`date`	varchar(20),
+	`userid`	INTEGER
+);
+CREATE TABLE `tbl_Payees` (
+	`id`	integer PRIMARY KEY AUTOINCREMENT,
+	`name`	varchar(20),
+	`phone`	varchar(20),
+	`email`	varchar(20),
+	`userid`	INTEGER
+);
+CREATE TABLE `tbl_Payers` (
+	`id`	integer PRIMARY KEY AUTOINCREMENT,
+	`name`	varchar(20),
+	`phone`	varchar(20),
+	`email`	varchar(20),
+	`userid`	INTEGER
+);
+CREATE TABLE `tbl_Users` (
+	`id`	integer PRIMARY KEY AUTOINCREMENT,
+	`name`	varchar(20),
+	`password`	varchar(20)
+);
